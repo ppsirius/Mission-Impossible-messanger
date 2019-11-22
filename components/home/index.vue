@@ -8,6 +8,7 @@
         >
           <h1 class="f2 f-subheadline-l measure lh-title fw9 white">Welcome to self destructing chat</h1>
           <br />
+          <register-user-input />
           <nuxt-link to="/chat">
             <div class="button">Create secure chat</div>
           </nuxt-link>
@@ -18,8 +19,11 @@
 </template>
 
 <script>
+import RegisterUserInput from '~/components/registerUserInput'
+
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: { RegisterUserInput }
 }
 </script>
 
