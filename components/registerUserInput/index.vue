@@ -37,7 +37,7 @@ export default {
   methods: {
     submitFormHandler: function(e) {
       e.preventDefault()
-      this.$router.push({ name: 'chat', params: { id: this.name } })
+      this.$router.push({ name: 'chat', params: { id: this.login } })
     }
   }
 }
