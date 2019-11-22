@@ -4,7 +4,12 @@
 
 <script>
 export default {
-  components: {}
+  components: {},
+  async asyncData() {
+    const date = new Date()
+    let hash = `jedkl1321_${Math.floor((date.getTime() * 3) / 2)}`
+    return  { hash }
+  }
 }
 </script>
 

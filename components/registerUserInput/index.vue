@@ -4,7 +4,7 @@
       <fieldset class="cf bn ma0 pa0">
         <legend class="pa0 f5 f4-ns mb3 black-80">Sign up for our newsletter</legend>
         <div class="cf">
-          <form @submit="sumbitFormHandler">
+          <form @submit="submitFormHandler">
             <label class="clip" for="email-address">Email Address</label>
             <input
               class="f6 f5-l input-reset bn fl black-80 bg-white pa3 lh-solid w-100 w-75-m w-80-l br2-ns br--left-ns"
@@ -35,7 +35,8 @@ export default {
     }
   },
   methods: {
-    submitFormHandler() {
+    submitFormHandler: function(e) {
+      e.preventDefault()
       this.$router.push({ name: 'chat', params: { id: this.name } })
     }
   }
