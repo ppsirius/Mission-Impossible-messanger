@@ -9,9 +9,6 @@
           <h1 class="f2 f-subheadline-l measure lh-title fw9 white">Welcome to self destructing chat</h1>
           <br />
           <register-user-input />
-          <nuxt-link @click:native="{chatLinkClicked}">
-            <div class="button">Create secure chat</div>
-          </nuxt-link>
         </div>
       </header>
     </article>
@@ -25,11 +22,6 @@ export default {
   name: 'Home',
   components: { RegisterUserInput },
   methods: {
-    chatLinkClicked() {
-      const date = new Date()
-      let hash = `jedkl1321_${Math.floor((date.getTime() * 3) / 2)}`
-      this.$router.push({ name: 'chat', params: { id: hash } })
-    }
   }
 }
 </script>
